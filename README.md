@@ -8,7 +8,11 @@ Data used were the resting state fMRI from HCP S1200 Release.\
 Our approach in calculating the gradients was validated by observing unique individual subject's gradients.\
 Gradients were aligned using Procrustes alignment method, although aligning with joint embedding and/or MSM is a future goal.
 
+<img src="https://user-images.githubusercontent.com/29262872/79281194-3f3b8380-7e80-11ea-989e-91fec0d5cfea.png" width="400"/>\
+Computed gradients from a random subject and average dconn provided by HCP S1200.\
+\
 Currently BCB project for Joelle Jee (@joellejee)
+
 
 ## Dependencies
 **Brainspace:** De Wael RV, Benkarim, O., Paquola, C., Lariviere, S., Royer, J., Tavakol, S., …, Bernhardt, B.C. (2019). BrainSpace: a toolbox for the analysis of macroscale gradients in neuroimaging and connectomics datasets. bioRxiv.
