@@ -1,3 +1,4 @@
+#!/bin/sh
 # building the reference grandients from the average release
 
 ## software env
