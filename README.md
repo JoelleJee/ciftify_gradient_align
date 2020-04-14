@@ -6,8 +6,8 @@ Construct and align gradients from rfMRI dtseries.
 The aim of this project was to set up a pipeline to use BrainSpace to calculate gradients.\
 Data used were the resting state fMRI from HCP S1200 Release.\
 Our approach in calculating the gradients was validated by observing unique individual subject's gradients.\
-Gradients were aligned using Procrustes alignment method, although aligning with joint embedding and/or MSM is a future goal.
-
+Gradients were aligned using Procrustes alignment method, although aligning with joint embedding and/or MSM is a future goal.\
+\
 <img src="https://user-images.githubusercontent.com/29262872/79281194-3f3b8380-7e80-11ea-989e-91fec0d5cfea.png" width="400"/>\
 Computed gradients from a random subject and average dconn provided by HCP S1200.\
 \
