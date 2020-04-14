@@ -20,10 +20,6 @@ function cleanup_ramdisk {
 trap "cleanup_ramdisk" TERM
 
 
-# # make directory for the sub in the dtseries folder
-# dtdir=$tmpdir/home/dtseries/$sub_no
-# mkdir -p $dtdir
-
 sub_no=$1
 
 # name all the folders
@@ -35,35 +31,15 @@ average_gradients_dscalar=${gradients_dscalar_out}/average/average_cortex_gradie
 
 # make directory for the subject in the separated folder
 dconn=${dconn_input_dir}/$sub_no
-# mkdir -p $dconn
-#
-# sub=$LRcombined
-#
-# day1=$(ls "$sub" | grep "REST1")
-# day2=$(ls "$sub" | grep "REST2")
-#
-# # day 1
-# wb_command -cifti-correlation \
-# $sub/$day1 \
-# $dconn/$sub_no"_rfMRI_REST1_Atlas_hp2000_clean2sm4.dconn.nii"
-#
-# # day 2
-# wb_command -cifti-correlation \
-# $sub/$day2 \
-# $dconn/$sub_no"_rfMRI_REST2_Atlas_hp2000_clean2sm4.dconn.nii"
-#
-# rm -rf $LRcombined
-# # Build gradients with dconn
+mkdir -p $dconn
+
 sub=$dconn
 
-# source ~/.virtualenvs/gradients/bin/activate
+source ~/.virtualenvs/gradients/bin/activate
 #
 python ~/code/ciftify_gradient_align/code/01_build_gradients.py \
    --procustes-align ${average_gradients_dscalar} \
    $sub ${gradients_txt_out}
-
-# _gradients_orig.txt
-# _gradients_proc.txt
 
 # get the subject's gradients.txt
 sub_grad_dir=${gradients_txt_out}/$sub_no
