@@ -3,6 +3,11 @@
 **Gradient based cifti alignment (BCB)** - 
 Construct and align gradients from rfMRI dtseries.
 
+The aim of this project was to set up a pipeline to use BrainSpace to calculate gradients.\
+Data used were the resting state fMRI from HCP S1200 Release.\
+Our approach in calculating the gradients was validated by observing unique individual subject's gradients.\
+Gradients were aligned using Procrustes alignment method, although aligning with joint embedding and/or MSM is a future goal.
+
 Currently BCB project for Joelle Jee (@joellejee)
 
 ## Dependencies
