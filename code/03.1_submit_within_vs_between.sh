@@ -1,3 +1,3 @@
 #!/bin/sh
 source ~/.virtualenvs/gradients/bin/activate
-python within_vs_between.py
+qbatch -b slurm -w 00:25:00 qbatch_within_vs_between.txt
